@@ -40,23 +40,27 @@ struct ArticlesDisplay: View {
                         .font(.caption)
                         .italic()
                 }
-                Link(destination: URL(string: article.url)!) {
-                    Text("Open article")
+                VStack {
+                    Link(destination: URL(string: article.url)!) {
+                        Text("Open article")
+                    }
+                    .font(.subheadline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 4).fill(.blue).frame(width: 340, height: 25)
+                    )
                 }
-                .font(.subheadline)
-                .foregroundColor(.white)
-                .padding()
-                .background(
-                    RoundedRectangle(cornerRadius: 4).fill(.blue).frame(width: 340, height: 25)
-                )
-                Button("Add to reading list") {
-                    SavedNews.create(article: article, context: modelContext)
+                VStack {
+                    Button("Add to reading list") {
+                        SavedNews.create(article: article, context: modelContext)
+                    }
+                    .font(.subheadline)
+                    .foregroundColor(.white)
+                    .background(
+                        RoundedRectangle(cornerRadius: 4).fill(.teal).frame(width: 340, height: 25)
+                    )
                 }
-                .font(.subheadline)
-                .foregroundColor(.white)
-                .background(
-                    RoundedRectangle(cornerRadius: 4).fill(.teal).frame(width: 340, height: 25)
-                )
             }
         }
     }

@@ -10,7 +10,7 @@ struct Article: Identifiable, Decodable {
     var urlToImage: String?
     var publishedAt: String
     var content: String?
-    
+        
     private enum CodingKeys: String, CodingKey {
         case source
         case author

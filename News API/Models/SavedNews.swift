@@ -6,7 +6,8 @@ import SwiftData
 class SavedNews {
     
     var headline: String
-    var link: String
+    @Attribute(.unique) var link: String
+
     
     init(headline: String, link: String) {
         self.headline = headline
