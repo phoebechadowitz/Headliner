@@ -50,6 +50,7 @@ struct ArticlesDisplay: View {
                     .background(
                         RoundedRectangle(cornerRadius: 4).fill(.blue).frame(width: 340, height: 25)
                     )
+                    .buttonStyle(.plain)
                 }
                 VStack {
                     Button("Add to reading list") {
@@ -60,6 +61,7 @@ struct ArticlesDisplay: View {
                     .background(
                         RoundedRectangle(cornerRadius: 4).fill(.teal).frame(width: 340, height: 25)
                     )
+                    .buttonStyle(.plain)
                 }
             }
         }
